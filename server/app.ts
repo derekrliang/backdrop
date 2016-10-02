@@ -15,12 +15,10 @@ const app: express.Application = express();
 app.use(json());
 app.use(urlencoded({ extended: true }));
 
-app.use(morgan('combined'));
-
 // api routes
-app.use('/photos', photoRouter);
+app.use('/photos', morgan('combined'), photoRouter);
 
-app.use('/', express.static(join(__dirname, '../client')));
+app.use(express.static(join(__dirname, '../client')));
 
 // error handlers
 // development error handler

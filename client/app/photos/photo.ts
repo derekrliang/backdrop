@@ -1,3 +1,3 @@
 export class Photo {
-    uri: string;
+    url: string;
 }

@@ -1,13 +1,17 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 
-import { PhotosComponent } from '../photos/photos.component';
-import { PhotoListComponent } from '../photos/photo-list.component';
-import { PhotoService } from '../photos/photo.service';
+import { PhotosComponent } from './photos/photos.component';
+import { PhotoListComponent } from './photos/photo-list.component';
+import { PhotoService } from './photos/photo.service';
 
 @NgModule({
-	imports: [BrowserModule],
+	imports: [
+		BrowserModule,
+		HttpModule
+	],
 	declarations: [
 		AppComponent,
 		PhotosComponent,
@@ -15,8 +19,9 @@ import { PhotoService } from '../photos/photo.service';
 	],
 	providers: [
 		PhotoService
-		//{ provide: APP_CONFIG, useValue: PHOTO_DI_CONFIG }
 	],
-	bootstrap: [AppComponent]
+	bootstrap: [
+		AppComponent
+	]
 })
 export class AppModule { }
