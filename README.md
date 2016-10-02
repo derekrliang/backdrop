@@ -1,6 +1,6 @@
 # backdrop
 
-> A screensaver web application that feeds on photos from 500px
+> Screensaver web application feeding on photos from 500px.
 
 ## Introduction
 
