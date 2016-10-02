@@ -2,6 +2,7 @@ import * as express from 'express';
 import { join } from 'path';
 import * as favicon from 'serve-favicon';
 import { json, urlencoded } from 'body-parser';
+import * as morgan from 'morgan';
 
 import { photoRouter } from './routes/photo';
 
@@ -13,6 +14,8 @@ const app: express.Application = express();
 
 app.use(json());
 app.use(urlencoded({ extended: true }));
+
+app.use(morgan('combined'));
 
 // api routes
 app.use('/photos', photoRouter);
