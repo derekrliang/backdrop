@@ -11,7 +11,7 @@ Client Frameworks:
 * [Foundation](http://foundation.zurb.com/)
 
 Backend Frameworks:
-* Lite-Server (soon switch to Express (TypeScript))
+* Express (TypeScript)
 
 External Resources:
 * 500px API
