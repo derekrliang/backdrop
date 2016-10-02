@@ -11,10 +11,7 @@ Client Frameworks:
 * [Foundation](http://foundation.zurb.com/)
 
 Backend Frameworks:
-* Express (TypeScript)
-
-Authentication:
-* JWT (JSON Web Token)
+* Lite-Server (soon switch to Express (TypeScript))
 
 External Resources:
 * 500px API
