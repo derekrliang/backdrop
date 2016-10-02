@@ -19,3 +19,8 @@ External Resources:
 ## Getting Started
 
 ### Getting 500px Consumer API Key
+
+## API
+
+### GET Photos
+> http://localhost:3000/photos
