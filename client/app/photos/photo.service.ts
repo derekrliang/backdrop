@@ -3,6 +3,8 @@ import { Http, Response } from '@angular/http';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 
+import { AppConstants } from '../app.constants';
+
 import { Photo } from './photo';
 import { Observable } from 'rxjs/Observable';
 
