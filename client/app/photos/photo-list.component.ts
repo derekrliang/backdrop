@@ -8,6 +8,7 @@ import { PhotoService } from './photo.service';
     providers: [PhotoService],
     template: `
     {{errorMessage}}
+	{{photos}}
     <div *ngFor="let photo of photos">
         {{photo.url}}
     </div>`

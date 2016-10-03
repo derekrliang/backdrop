@@ -18,13 +18,12 @@ export class PhotoService {
 
     getPhotos(): Observable<Photo[]> {
         return this.http.get(this.photosUrl)
-            .map(this.extractData)
+            .map(this.transformToJson)
 			.catch(this.handleError);
     }
 
-	private extractData(res: Response) {
-    	let body = res.json();
-    	return body.data || { };
+	private transformToJson(res: Response) {
+    	return res.json() || { };
 	}
 
 	private handleError (error: any) {
