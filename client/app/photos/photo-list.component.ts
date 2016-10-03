@@ -7,10 +7,9 @@ import { PhotoService } from './photo.service';
     selector: 'photo-list',
     providers: [PhotoService],
     template: `
-    {{errorMessage}}
-	{{photos}}
+	{{errorMessage}}
     <div *ngFor="let photo of photos">
-        {{photo.url}}
+		<img src="{{photo.image_url}}">
     </div>`
 })
 export class PhotoListComponent {
