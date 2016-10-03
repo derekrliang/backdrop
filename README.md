@@ -18,6 +18,16 @@ External Resources:
 
 ## Getting Started
 
+### server.json
+
+`server/server.json` is a configuration file of constants required for the server. It is by default ignored by git, so you won't check in your private secrets and keys into a public repository.
+
+``` json
+{
+    "consumerKey": "QhnUTYnELsMY6s6yLa3iDtlIkGScjL3ZPSIVa21A"
+}
+```
+
 ### Getting 500px Consumer API Key
 
 500px's API is authenticated and require either: 1) consumer key or 2) OAuth. For now, we won't be needing OAuth as we'll be doing simple queries for featured photos that only requires a valid consumer key.
@@ -28,7 +38,7 @@ External Resources:
 
 ![Register Application on 500px](public/readme/500px-register-application.png)
 
-4) After you register, you will get a consumer key. We'll be using it to get photos from 500px.
+4) After you register, you will get a consumer key. Put it in your `server.json` as we'll need it to get photos from 500px.
 
 ## API
 
