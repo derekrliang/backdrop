@@ -6,7 +6,24 @@ let config = require('../server.json');
 
 const photoRouter: Router = Router();
 
-photoRouter.get('/', function (req: Request, res: Response, next: NextFunction) {
+photoRouter.get('/:photoId', getPhoto);
+photoRouter.get('/', getPopularPhotos);
+
+function getPhoto(req: Request, res: Response, next: NextFunction) {
+    const photoId = req.params.photoId;
+
+    const options = {
+        url: `https://api.500px.com/v1/photos/${photoId}?&consumer_key=${config.consumerKey}`,
+        method: 'GET',
+        json: true
+    };
+
+    request.get(options, function (error: any, response: IncomingMessage, body: any) {
+        res.json(body.photo);
+    });
+};
+
+function getPopularPhotos(req: Request, res: Response, next: NextFunction) {
     const options = {
         url: `https://api.500px.com/v1/photos?feature=popular&consumer_key=${config.consumerKey}`,
         method: 'GET',
@@ -16,6 +33,6 @@ photoRouter.get('/', function (req: Request, res: Response, next: NextFunction) 
     request.get(options, function (error: any, response: IncomingMessage, body: any) {
         res.json(body.photos);
     });
-});
+};
 
 export { photoRouter }
