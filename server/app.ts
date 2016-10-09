@@ -16,7 +16,7 @@ app.use(json());
 app.use(urlencoded({ extended: true }));
 
 // api routes
-app.use('/photos', morgan('combined'), photoRouter);
+app.use('/api/photos', morgan('combined'), photoRouter);
 
 app.use(express.static(join(__dirname, '../client')));
 

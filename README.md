@@ -63,15 +63,14 @@ Visit http://localhost:3000/ and you should see the main page load.
 
 If there are no photos, make sure you have the `consumerKey` properly setup in the `server.json` file.
 
-
 ## Endpoint API
 
 ### GET Photos
 
-> Endpoint
+> **Endpoint**
 >
-> http://localhost:3000/photos
+> http://localhost:3000/api/photos
 >
-> Example CURL
+> **CURL Example**
 >
-> CURL -X GET http://localhost:3000/photos
+> CURL -X GET http://localhost:3000/api/photos

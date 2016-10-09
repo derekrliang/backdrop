@@ -10,7 +10,7 @@ import { Observable } from 'rxjs/Observable';
 
 @Injectable()
 export class PhotoService {
-    private photosUrl = '/photos';
+    private photosUrl = '/api/photos';
 
     constructor(private http: Http) {}
 
