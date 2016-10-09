@@ -53,13 +53,13 @@ cd backdrop
 npm install
 ```
 
-## Run Client and Server
+### Run Client and Server
 
 ``` bash
 npm start
 ```
 
-Visit http://localhost:3000/ and you should see the main page load.
+Visit `http://localhost:3000/` and you should see the main page load.
 
 If there are no photos, make sure you have the `consumerKey` properly setup in the `server.json` file.
 
