@@ -40,8 +40,29 @@ External Resources:
 
 4) After you register, you will get a consumer key. Put it in your `server.json` as we'll need it to get photos from 500px.
 
-## API
+### Installing Packages
+
+``` bash
+npm install
+```
+
+## Run Client and Server
+
+``` bash
+npm start
+```
+
+Visit http://localhost:3000/ and you should see the main page load.
+
+If there are no photos, make sure you have the `consumerKey` properly setup in the `server.json` file.
+
+
+## Endpoint API
 
 ### GET Photos
 
+> Endpoint
 > http://localhost:3000/photos
+
+> Example CURL
+> CURL -X GET http://localhost:3000/photos

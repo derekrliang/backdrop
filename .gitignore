@@ -6,3 +6,4 @@ client/**/*.js
 client/**/*.js.map
 /npm-debug.log
 server/server.json
+!systemjs.config.js
