@@ -14,7 +14,6 @@ function getPhoto(req: Request, res: Response, next: NextFunction) {
 
     const options = {
         url: `https://api.500px.com/v1/photos/${photoId}?&consumer_key=${config.consumerKey}`,
-        method: 'GET',
         json: true
     };
 
@@ -26,7 +25,6 @@ function getPhoto(req: Request, res: Response, next: NextFunction) {
 function getPopularPhotos(req: Request, res: Response, next: NextFunction) {
     const options = {
         url: `https://api.500px.com/v1/photos?feature=popular&consumer_key=${config.consumerKey}`,
-        method: 'GET',
         json: true
     };
 
