@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "concurrently \"tsc -w -p ./server\" \"tsc -w -p ./client\" \"nodemon ./server/bin/www\" ",
-    "postinstall": "typings install",
+    "postinstall": "pushd server; typings install; popd",
     "server": "concurrently \"tsc -w -p ./server\" \"nodemon ./server/bin/www\" ",
     "tsc": "tsc",
     "tsc:w": "tsc -w",
