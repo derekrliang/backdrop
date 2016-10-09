@@ -37,10 +37,9 @@ if (app.get('env') === 'development') {
     });
 }
 
-// catch 404 and forward to error handler
+// catch all unmatched and forward angular client index
 app.use(function(req: express.Request, res: express.Response, next) {
-    let err = new Error('Not Found');
-    next(err);
+    res.sendFile('client/index.html', { root: '.' });
 });
 
 // production error handler
