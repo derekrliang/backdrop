@@ -5,11 +5,12 @@
   "main": "index.js",
   "scripts": {
     "start": "concurrently \"tsc -w -p ./server\" \"tsc -w -p ./client\" \"nodemon ./server/bin/www\" ",
-    "postinstall": "pushd server; typings install; popd; pushd client; typings install; popd",
+    "postinstall": "typings install",
     "server": "concurrently \"tsc -w -p ./server\" \"nodemon ./server/bin/www\" ",
     "tsc": "tsc",
     "tsc:w": "tsc -w",
-    "typings": "typings"
+    "typings": "typings",
+    "cleanall": "rm -rf node_modules typings client/typings server/typings"
   },
   "repository": {
     "type": "git",

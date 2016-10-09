@@ -18,6 +18,13 @@ External Resources:
 
 ## Getting Started
 
+### Clone Project
+
+```
+git clone https://github.com/derekrliang/backdrop.git
+cd backdrop
+```
+
 ### server.json
 
 `server/server.json` is a configuration file of constants required for the server. It is by default ignored by git, so you won't check in your private secrets and keys into a public repository.
@@ -62,7 +69,9 @@ If there are no photos, make sure you have the `consumerKey` properly setup in t
 ### GET Photos
 
 > Endpoint
+>
 > http://localhost:3000/photos
-
+>
 > Example CURL
+>
 > CURL -X GET http://localhost:3000/photos
