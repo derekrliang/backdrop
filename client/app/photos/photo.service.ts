@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Http, Response } from '@angular/http';
+import { Http, Response, URLSearchParams } from '@angular/http';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 
@@ -14,8 +14,10 @@ export class PhotoService {
 
     constructor(private http: Http) {}
 
-    getPhotosStatic() {
-        return [{url: 'test1'}];
+    getPhoto(photoId: number): Observable<Photo> {
+        return this.http.get(`${this.photosUrl}/${photoId}`)
+            .map(this.transformToJson)
+			.catch(this.handleError);
     }
 
     getPhotos(): Observable<Photo[]> {
